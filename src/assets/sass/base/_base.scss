@@ -1,0 +1,63 @@
+@use "constantes";
+@use "fuentes";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::selection {
+  background-color: constantes.$color35;
+}
+
+html {
+  font-size: 10px;
+
+  @media (width <= constantes.$bp-desktop) {
+    font-size: 9px;
+  }
+
+  @media (width <= constantes.$bp-tablet) {
+    font-size: 8px;
+  }
+
+  @media (width <= constantes.$bp-tablet-sm) {
+    font-size: 7px;
+  }
+
+  @media (width <= constantes.$bp-mobile) {
+    font-size: 6px;
+  }
+
+  @media (width <= constantes.$bp-mobile-sm) {
+    font-size: 7px;
+  }
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+  color: constantes.$color99;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  user-select: none;
+}
+
+body {
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  font-family: fuentes.$font3;
+  position: relative;
+}
